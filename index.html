@@ -3,69 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercise 01 - Mobile Home</title>
+    <title>Learning Dashboard</title>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Fraunces:wght@600;700&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="bai1.css" />
+    <link rel="stylesheet" href="bai2.css" />
   </head>
   <body>
-    <header class="header">
-      <h1>City Explorer</h1>
-      <button class="btn"></button>
-    </header>
-
     <main class="container">
-      <section class="welcome">
-        <h2>Welcome Back</h2>
-        <p>Plan your next weekend in one tap.</p>
-      </section>
+      <header class="header">
+        <h1>Learning Dashboard</h1>
+        <button class="btn-outline">Notifications</button>
+      </header>
 
-      <section class="places">
-        <h2>Popular Places</h2>
-
-        <div class="grid">
-          <article class="card">
-            <img
-              src="https://media.gettyimages.com/id/523941685/photo/vieux-nice-cours-saleya.jpg?s=612x612&w=gi&k=20&c=hOzQNPPFtqiICdGAGj3uzZd_ATHrlEcDDtMu5Q4c6gM="
-              alt="Old Town Market"
-            />
-            <h3>Old Town Market</h3>
-            <p>Food and crafts</p>
-            <button class="btn">View</button>
-          </article>
-
-          <article class="card">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJVjdpNvanmRaTh6SZtsCn5MMYyGdw6QYvDg&s"
-              alt="River Walk"
-            />
-            <h3>River Walk</h3>
-            <p>Morning trail</p>
-            <button class="btn">View</button>
-          </article>
-
-          <article class="card">
-            <img
-              src="https://www.shutterstock.com/image-photo/street-art-graffiti-mural-new-260nw-2728622985.jpg"
-              alt="Art Street"
-            />
-            <h3>Art Street</h3>
-            <p>Weekend events</p>
-            <button class="btn">View</button>
-          </article>
+      <section class="card progress">
+        <div>
+          <h2>Progress Overview</h2>
+          <p>2 courses active, 1 due this week.</p>
         </div>
+        <span class="badge">Due Soon</span>
       </section>
-    </main>
 
-    <nav class="bottom-nav">
-      <a href="#"> Home</a>
-      <a href="#"> Map</a>
-      <a href="#"> Saved</a>
-      <a href="#"> Profile</a>
-    </nav>
+      <div class="grid">
+        <section class="card">
+          <h2>Continue Learning</h2>
+
+          <article class="item">
+            <div>
+              <h3>UX Writing Basics</h3>
+              <p>Lesson 5 of 12</p>
+            </div>
+            <button class="btn">Resume</button>
+          </article>
+
+          <article class="item">
+            <div>
+              <h3>Design Systems</h3>
+              <p>Lesson 3 of 8</p>
+            </div>
+            <button class="btn">Resume</button>
+          </article>
+        </section>
+
+        <section class="card">
+          <h2>Upcoming Tasks</h2>
+          <ul class="tasks">
+            <li>Quiz: Accessibility Basics</li>
+            <li>Project: Travel App Wireframe</li>
+            <li>Peer Review: Checkout Flow</li>
+          </ul>
+        </section>
+      </div>
+    </main>
   </body>
 </html>
