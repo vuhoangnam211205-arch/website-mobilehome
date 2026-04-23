@@ -1,0 +1,145 @@
+:root {
+  --primary: #ff6b6b;
+  --primary-light: #ff8787;
+  --primary-dark: #e03131;
+
+  --secondary: #4ecdc4;
+  --secondary-light: #63e6be;
+  --secondary-dark: #0ca678;
+
+  --accent-yellow: #ffd43b;
+  --accent-purple: #845ef7;
+  --accent-blue: #339af0;
+
+  --bg: #f7f9fc;
+  --bg-soft: #f1f3f5;
+  --text: #333;
+  --text-light: #666;
+  --white: #fff;
+
+  --radius: 16px;
+  --spacing: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #fdfbfb, #dbeafe);
+  color: var(--text);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing);
+  background: linear-gradient(135deg, var(--primary), var(--accent-purple));
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header h1 {
+  color: white;
+}
+
+.btn {
+  background: linear-gradient(135deg, var(--primary), var(--accent-purple));
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, var(--secondary), var(--accent-blue));
+}
+
+.container {
+  padding: var(--spacing);
+}
+
+.welcome {
+  margin-bottom: 20px;
+}
+
+.welcome h2 {
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.grid {
+  display: grid;
+  gap: 15px;
+}
+
+.card {
+  background: var(--white);
+  padding: 15px;
+  border-radius: var(--radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid var(--primary);
+  transition: 0.3s;
+}
+
+.card:nth-child(2) {
+  border-top: 4px solid var(--secondary);
+}
+
+.card:nth-child(3) {
+  border-top: 4px solid var(--accent-purple);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card p {
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: var(--white);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.bottom-nav a:hover {
+  color: var(--primary);
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: auto;
+  }
+}
